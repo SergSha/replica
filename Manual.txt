@@ -34,13 +34,13 @@ https://github.com/settings/keys
 # Install git
 yum -y install git
 
-# Connect to GitHub repo (source)
-git clone git@github.com:SergSha/source.git
+# Connect to GitHub repo (replica)
+git clone git@github.com:SergSha/replica.git
 
 # Make the file inst_set.sh execute
 chmod u+x /root/replica/inst_set.sh
 
-# Start source_inst_set.sh
+# Start inst_set.sh
 /root/replica/inst_set.sh
 
 # Start MySQL command console
