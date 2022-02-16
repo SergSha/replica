@@ -16,8 +16,8 @@ yum -y install httpd
 # Add index.html to path /var/www/html/
 cp -rf /root/replica/html/* /var/www/html/
 
-# Add conf_upd.sh to cron.daily
-cp -f /root/replica/conf_upd.sh /etc/cron.daily/
+# Add conf_upd.sh, mysqlbackup.sh to cron.daily
+cp -f /root/replica/{conf_upd,mysqlbackup}.sh /etc/cron.daily/
 
 # Start httpd
 systemctl start httpd
