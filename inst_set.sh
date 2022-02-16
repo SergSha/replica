@@ -28,6 +28,9 @@ systemctl enable httpd
 # httpd status
 systemctl status httpd
 
+# Create directory for MySql Backup
+mkdir /root/mysqlbackup
+
 # Install MySQL
 rpm -Uvh https://repo.mysql.com/mysql80-community-release-el7-5.noarch.rpm
 sed -i 's/enabled=1/enabled=0/' /etc/yum.repos.d/mysql-community.repo
