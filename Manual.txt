@@ -43,9 +43,26 @@ chmod u+x /root/replica/inst_set.sh
 # Start inst_set.sh
 /root/replica/inst_set.sh
 
+# Download backup copy databases MySQL
+mysql -uroot -p < /root/mydb_all.sql
+
 # Start MySQL command console
 mysql -uroot -p
 
+# Остановим Slave
+STOP SLAVE;
+
+# получаю публичный ключ
+CHANGE MASTER TO MASTER_HOST='10.0.1.11', MASTER_USER='repl', MASTER_PASSWORD='Tn91Uk57@', MASTER_LOG_FILE='binlog.000002', MASTER_LOG_POS=688, GET_MASTER_PUBLIC_KEY = 1;
+
+# запускаю Slave
+START SLAVE;
+
+# проверяю статус Slave
+SHOW SLAVE STATUS\G
+
+
+----------------------------------------------------
 # Add user for replication
 CREATE USER repl@'10.0.1.11' IDENTIFIED WITH 'caching_sha2_password' BY 'Tn91Uk57@';
 
@@ -62,15 +79,3 @@ server_id = 2
 
 и рекомендуется включать для replica, чтобы запретить вносить изменения
 innodb_read_only = 1
-
-# Остановим Slave
-STOP SLAVE;
-
-# получаю публичный ключ
-CHANGE MASTER TO MASTER_HOST='10.0.1.11', MASTER_USER='repl', MASTER_PASSWORD='Tn91Uk57@', MASTER_LOG_FILE='binlog.000002', MASTER_LOG_POS=688, GET_MASTER_PUBLIC_KEY = 1;
-
-# запускаю Slave
-START SLAVE;
-
-# проверяю статус Slave
-SHOW SLAVE STATUS\G
