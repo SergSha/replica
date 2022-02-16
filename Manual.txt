@@ -49,17 +49,19 @@ mysql -uroot -p < /root/mydb_all.sql
 # Start MySQL command console
 mysql -uroot -p
 
-# Остановим Slave
-STOP SLAVE;
+# Stop replica
+STOP REPLICA;
 
-# получаю публичный ключ
+# Get public key Attention: BINLOG & MASTER_LOG_POS !!!
 CHANGE MASTER TO MASTER_HOST='10.0.1.11', MASTER_USER='repl', MASTER_PASSWORD='Tn91Uk57@', MASTER_LOG_FILE='binlog.000002', MASTER_LOG_POS=688, GET_MASTER_PUBLIC_KEY = 1;
 
-# запускаю Slave
-START SLAVE;
+# Start replica
+START REPLICA;
 
-# проверяю статус Slave
-SHOW SLAVE STATUS\G
+# Get replica status
+SHOW REPLICA STATUS\G
+
+
 
 
 ----------------------------------------------------
