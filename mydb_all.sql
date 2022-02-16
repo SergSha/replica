@@ -21,7 +21,7 @@
 -- Position to start replication or point-in-time recovery from
 --
 
--- CHANGE MASTER TO MASTER_LOG_FILE='binlog.000007', MASTER_LOG_POS=2547;
+-- CHANGE MASTER TO MASTER_LOG_FILE='binlog.000001', MASTER_LOG_POS=1211071;
 
 --
 -- Current Database: `mysql`
@@ -179,7 +179,7 @@ CREATE TABLE `engine_cost` (
 
 LOCK TABLES `engine_cost` WRITE;
 /*!40000 ALTER TABLE `engine_cost` DISABLE KEYS */;
-INSERT INTO `engine_cost` (`engine_name`, `device_type`, `cost_name`, `cost_value`, `last_update`, `comment`) VALUES ('default',0,'io_block_read_cost',NULL,'2022-02-15 11:45:58',NULL),('default',0,'memory_block_read_cost',NULL,'2022-02-15 11:45:58',NULL);
+INSERT INTO `engine_cost` (`engine_name`, `device_type`, `cost_name`, `cost_value`, `last_update`, `comment`) VALUES ('default',0,'io_block_read_cost',NULL,'2022-02-16 17:36:48',NULL),('default',0,'memory_block_read_cost',NULL,'2022-02-16 17:36:48',NULL);
 /*!40000 ALTER TABLE `engine_cost` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -359,7 +359,7 @@ UNLOCK TABLES;
 --
 
 /*!40000 ALTER TABLE `innodb_index_stats` DISABLE KEYS */;
-INSERT  IGNORE INTO `innodb_index_stats` VALUES ('cars_db','new_cars','PRIMARY','2022-02-16 11:19:20','n_diff_pfx01',2,1,'id'),('cars_db','new_cars','PRIMARY','2022-02-16 11:19:20','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('cars_db','new_cars','PRIMARY','2022-02-16 11:19:20','size',1,NULL,'Number of pages in the index'),('mysql','component','PRIMARY','2022-02-16 08:47:32','n_diff_pfx01',0,1,'component_id'),('mysql','component','PRIMARY','2022-02-16 08:47:32','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('mysql','component','PRIMARY','2022-02-16 08:47:32','size',1,NULL,'Number of pages in the index'),('sys','sys_config','PRIMARY','2022-02-16 07:52:58','n_diff_pfx01',6,1,'variable'),('sys','sys_config','PRIMARY','2022-02-16 07:52:58','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('sys','sys_config','PRIMARY','2022-02-16 07:52:58','size',1,NULL,'Number of pages in the index');
+INSERT  IGNORE INTO `innodb_index_stats` VALUES ('cars_db','new_cars','PRIMARY','2022-02-16 19:07:53','n_diff_pfx01',2,1,'id'),('cars_db','new_cars','PRIMARY','2022-02-16 19:07:53','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('cars_db','new_cars','PRIMARY','2022-02-16 19:07:53','size',1,NULL,'Number of pages in the index'),('mysql','component','PRIMARY','2022-02-16 18:36:46','n_diff_pfx01',0,1,'component_id'),('mysql','component','PRIMARY','2022-02-16 18:36:46','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('mysql','component','PRIMARY','2022-02-16 18:36:46','size',1,NULL,'Number of pages in the index'),('sys','sys_config','PRIMARY','2022-02-16 18:34:32','n_diff_pfx01',6,1,'variable'),('sys','sys_config','PRIMARY','2022-02-16 18:34:32','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('sys','sys_config','PRIMARY','2022-02-16 18:34:32','size',1,NULL,'Number of pages in the index');
 /*!40000 ALTER TABLE `innodb_index_stats` ENABLE KEYS */;
 
 --
@@ -367,7 +367,7 @@ INSERT  IGNORE INTO `innodb_index_stats` VALUES ('cars_db','new_cars','PRIMARY',
 --
 
 /*!40000 ALTER TABLE `innodb_table_stats` DISABLE KEYS */;
-INSERT  IGNORE INTO `innodb_table_stats` VALUES ('cars_db','new_cars','2022-02-16 11:19:20',2,1,0),('mysql','component','2022-02-16 08:47:32',0,1,0),('sys','sys_config','2022-02-16 07:52:58',6,1,0);
+INSERT  IGNORE INTO `innodb_table_stats` VALUES ('cars_db','new_cars','2022-02-16 19:07:53',2,1,0),('mysql','component','2022-02-16 18:36:46',0,1,0),('sys','sys_config','2022-02-16 18:34:32',6,1,0);
 /*!40000 ALTER TABLE `innodb_table_stats` ENABLE KEYS */;
 
 --
@@ -474,7 +474,7 @@ CREATE TABLE `proxies_priv` (
 
 LOCK TABLES `proxies_priv` WRITE;
 /*!40000 ALTER TABLE `proxies_priv` DISABLE KEYS */;
-INSERT INTO `proxies_priv` VALUES ('localhost','root','','',1,'boot@','2022-02-15 11:45:58');
+INSERT INTO `proxies_priv` VALUES ('localhost','root','','',1,'boot@','2022-02-16 17:36:48');
 /*!40000 ALTER TABLE `proxies_priv` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -633,7 +633,7 @@ CREATE TABLE `server_cost` (
 
 LOCK TABLES `server_cost` WRITE;
 /*!40000 ALTER TABLE `server_cost` DISABLE KEYS */;
-INSERT INTO `server_cost` (`cost_name`, `cost_value`, `last_update`, `comment`) VALUES ('disk_temptable_create_cost',NULL,'2022-02-15 11:45:58',NULL),('disk_temptable_row_cost',NULL,'2022-02-15 11:45:58',NULL),('key_compare_cost',NULL,'2022-02-15 11:45:58',NULL),('memory_temptable_create_cost',NULL,'2022-02-15 11:45:58',NULL),('memory_temptable_row_cost',NULL,'2022-02-15 11:45:58',NULL),('row_evaluate_cost',NULL,'2022-02-15 11:45:58',NULL);
+INSERT INTO `server_cost` (`cost_name`, `cost_value`, `last_update`, `comment`) VALUES ('disk_temptable_create_cost',NULL,'2022-02-16 17:36:48',NULL),('disk_temptable_row_cost',NULL,'2022-02-16 17:36:48',NULL),('key_compare_cost',NULL,'2022-02-16 17:36:48',NULL),('memory_temptable_create_cost',NULL,'2022-02-16 17:36:48',NULL),('memory_temptable_row_cost',NULL,'2022-02-16 17:36:48',NULL),('row_evaluate_cost',NULL,'2022-02-16 17:36:48',NULL);
 /*!40000 ALTER TABLE `server_cost` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -768,7 +768,7 @@ CREATE TABLE `slave_worker_info` (
 
 LOCK TABLES `slave_worker_info` WRITE;
 /*!40000 ALTER TABLE `slave_worker_info` DISABLE KEYS */;
-INSERT INTO `slave_worker_info` VALUES (1,'./replica-relay-bin.000002',1125,'binlog.000003',2127,'./replica-relay-bin.000002',801,'binlog.000003',1803,0,64,_binary '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0',''),(2,'',0,'',0,'',0,'',0,0,64,_binary '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0',''),(3,'',0,'',0,'',0,'',0,0,64,_binary '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0',''),(4,'',0,'',0,'',0,'',0,0,64,_binary '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0','');
+INSERT INTO `slave_worker_info` VALUES (1,'./replica-relay-bin.000002',1125,'binlog.000001',2175,'./replica-relay-bin.000002',801,'binlog.000001',1851,0,64,_binary '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0',''),(2,'',0,'',0,'',0,'',0,0,64,_binary '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0',''),(3,'',0,'',0,'',0,'',0,0,64,_binary '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0',''),(4,'',0,'',0,'',0,'',0,0,64,_binary '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0','');
 /*!40000 ALTER TABLE `slave_worker_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -799,7 +799,7 @@ CREATE TABLE `tables_priv` (
 
 LOCK TABLES `tables_priv` WRITE;
 /*!40000 ALTER TABLE `tables_priv` DISABLE KEYS */;
-INSERT INTO `tables_priv` VALUES ('localhost','mysql','mysql.session','user','boot@','2022-02-15 11:46:00','Select',''),('localhost','sys','mysql.sys','sys_config','root@localhost','2022-02-15 11:46:00','Select','');
+INSERT INTO `tables_priv` VALUES ('localhost','mysql','mysql.session','user','boot@','2022-02-16 17:36:49','Select',''),('localhost','sys','mysql.sys','sys_config','root@localhost','2022-02-16 17:36:49','Select','');
 /*!40000 ALTER TABLE `tables_priv` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -991,7 +991,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES ('10.0.1.12','repl','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','Y','N','N','N','N','N','N','N','N','N','','','','',0,0,0,0,'caching_sha2_password','$A$005$~jnMVVR8+\"b	?5Vrp4M4SRByCG3Cvz5YX6kDB4LHP/4awPrqx7CuOf.2','N','2022-02-15 11:51:56',NULL,'N','N','N',NULL,NULL,NULL,NULL),('localhost','mysql.infoschema','Y','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','','','','',0,0,0,0,'caching_sha2_password','$A$005$THISISACOMBINATIONOFINVALIDSALTANDPASSWORDTHATMUSTNEVERBRBEUSED','N','2022-02-15 11:46:00',NULL,'Y','N','N',NULL,NULL,NULL,NULL),('localhost','mysql.session','N','N','N','N','N','N','N','Y','N','N','N','N','N','N','N','Y','N','N','N','N','N','N','N','N','N','N','N','N','N','','','','',0,0,0,0,'caching_sha2_password','$A$005$THISISACOMBINATIONOFINVALIDSALTANDPASSWORDTHATMUSTNEVERBRBEUSED','N','2022-02-15 11:46:00',NULL,'Y','N','N',NULL,NULL,NULL,NULL),('localhost','mysql.sys','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','','','','',0,0,0,0,'caching_sha2_password','$A$005$THISISACOMBINATIONOFINVALIDSALTANDPASSWORDTHATMUSTNEVERBRBEUSED','N','2022-02-15 11:46:00',NULL,'Y','N','N',NULL,NULL,NULL,NULL),('localhost','root','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','','','','',0,0,0,0,'caching_sha2_password','$A$005$\\i&krIXTU3/K\ZBjgn9UhFplPV0bH4F5A2w.mLjGzJBWaPmvYIpSvZLD/tic8','N','2022-02-15 11:47:26',NULL,'N','Y','Y',NULL,NULL,NULL,NULL);
+INSERT INTO `user` VALUES ('10.0.1.12','repl','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','Y','N','N','N','N','N','N','N','N','N','','','','',0,0,0,0,'caching_sha2_password','$A$005$u*)	xDvE;R	6_G<t28I3j8/D9Fh.7CIi4SMsIkIdZV96w1tyYydV7OsFqH4','N','2022-02-16 17:39:19',NULL,'N','N','N',NULL,NULL,NULL,NULL),('localhost','mysql.infoschema','Y','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','','','','',0,0,0,0,'caching_sha2_password','$A$005$THISISACOMBINATIONOFINVALIDSALTANDPASSWORDTHATMUSTNEVERBRBEUSED','N','2022-02-16 17:36:49',NULL,'Y','N','N',NULL,NULL,NULL,NULL),('localhost','mysql.session','N','N','N','N','N','N','N','Y','N','N','N','N','N','N','N','Y','N','N','N','N','N','N','N','N','N','N','N','N','N','','','','',0,0,0,0,'caching_sha2_password','$A$005$THISISACOMBINATIONOFINVALIDSALTANDPASSWORDTHATMUSTNEVERBRBEUSED','N','2022-02-16 17:36:49',NULL,'Y','N','N',NULL,NULL,NULL,NULL),('localhost','mysql.sys','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','N','','','','',0,0,0,0,'caching_sha2_password','$A$005$THISISACOMBINATIONOFINVALIDSALTANDPASSWORDTHATMUSTNEVERBRBEUSED','N','2022-02-16 17:36:49',NULL,'Y','N','N',NULL,NULL,NULL,NULL),('localhost','root','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','','','','',0,0,0,0,'caching_sha2_password','$A$005$^d @>#^/!{p`%^*V8YTYW1J3AD3r5KcP1e04hfu2gcGCUH89Ch7ujimQgK7','N','2022-02-16 17:37:33',NULL,'N','Y','Y',NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1077,4 +1077,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-02-16 15:18:24
+-- Dump completed on 2022-02-16 22:21:44
