@@ -43,6 +43,9 @@ chmod u+x /root/replica/inst_set.sh
 # Start inst_set.sh
 /root/replica/inst_set.sh
 
+# Add login for backup MySQL database
+mysql_config_editor set --login-path=backup -uroot -p
+
 # Download backup copy databases MySQL
 mysql -uroot -p < /root/mydb_all.sql
 
