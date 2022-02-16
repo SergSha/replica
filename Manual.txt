@@ -61,11 +61,19 @@ START REPLICA;
 # Get replica status
 SHOW REPLICA STATUS\G
 
-
-
-
+# Go to source host to make new databeses for test replication
 ----------------------------------------------------
-# Add user for replication
+# After source host test replication
+SHOW DATABASES;
+SHOW TABLES FROM cars_db;
+SELECT * FROM cars_db.new_cars;
+exit;
+
+
+
+
+---------RECOMENDATIONS---------
+# Add user for replication MASTER-MASTER
 CREATE USER repl@'10.0.1.11' IDENTIFIED WITH 'caching_sha2_password' BY 'Tn91Uk57@';
 
 # Даю пользователю repl права на репликацию
