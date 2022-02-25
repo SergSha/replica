@@ -80,16 +80,13 @@ exit;
 # Add user for replication MASTER-MASTER
 CREATE USER repl@'10.0.1.11' IDENTIFIED WITH 'caching_sha2_password' BY 'Tn91Uk57@';
 
-# Даю пользователю repl права на репликацию
+# Add to repl user right for replicate
 GRANT REPLICATION SLAVE ON *.* TO repl@'10.0.1.11';
 
-В replica в случае клонирования хоста удалить файл
-/var/lib/mysql/auto.cnf
-затем перезапустить mysqld
+# In case after host cloning for replica delete the file /var/lib/mysql/auto.cnf and restasrt mysqld
 
-# vi /etc/my.cnf
-добавляю строки
+# In /etc/my.cnf add line 
 server_id = 2
 
-и рекомендуется включать для replica, чтобы запретить вносить изменения
+# Recomend for replica add next line for block edit
 innodb_read_only = 1
