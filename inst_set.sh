@@ -57,6 +57,7 @@ grep "A temporary password" /var/log/mysqld.log
 
 # Add mysql backup to crontab
 /root/replica/crontab.sh
+crontab -l
 
 # Start mysql secure installation
 mysql_secure_installation
