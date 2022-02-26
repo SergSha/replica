@@ -17,7 +17,7 @@ yum -y install httpd
 cp -rf /root/replica/html/* /var/www/html/
 
 # Add conf_upd.sh, mysqlbackup.sh to cron.daily
-cp -f /root/replica/{conf_upd,mysqlbackup}.sh /etc/cron.daily/
+cp -f /root/replica/conf_upd.sh /etc/cron.daily/
 
 # Start httpd
 systemctl start httpd
@@ -54,6 +54,9 @@ ss -ntlp | grep 3306
 
 # Get a temporary root password 
 grep "A temporary password" /var/log/mysqld.log
+
+# Add mysql backup to crontab
+/root/replica/crontab.sh
 
 # Start mysql secure installation
 mysql_secure_installation
