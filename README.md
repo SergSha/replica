@@ -30,6 +30,7 @@ yum -y install git
 
 # Connect to GitHub repo for download to host
 git clone https://github.com/SergSha/replica.git
+git clone https://github.com/SergSha/mysqlbackup
 
 #------- For to upload to GitHub -------------
 # Make pair keys
@@ -51,7 +52,8 @@ chmod u+x /root/replica/inst_set.sh
 mysql_config_editor set --login-path=backup -uroot -p
 
 # Download backup copy databases MySQL
-mysql -uroot -p < /root/mydb_all.sql
+#mysql -uroot -p < /root/mydb_all.sql
+/root/replica/mysqlrestore.sh
 
 # Start MySQL command console
 mysql -uroot -p
