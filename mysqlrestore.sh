@@ -8,6 +8,7 @@ echo $lastmysqlbackuppath
 
 for db in $(ls -1 $lastmysqlbackuppath);
   do
+  /usr/bin/mysql --login-path=backup -e "CREATE DATABASE $db; use $db;"
   for tbl in $(ls -1 $lastmysqlbackuppath/$db);
     do
     echo "--> $db/$tbl restoring...";
