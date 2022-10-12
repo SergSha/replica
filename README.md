@@ -1,4 +1,4 @@
-# replica
+## replica
 Enter with root
 ```
 sudo -i
@@ -50,17 +50,23 @@ git clone https://github.com/SergSha/replica.git
 git clone https://github.com/SergSha/mysqlbackup
 ```
 
+-------- For to upload to GitHub -------------
+Make pair keys
 ```
-#------- For to upload to GitHub -------------
-# Make pair keys
-#ssh-keygen #Enter-Enter-Enter
-# Copy text of pub key and paste into GitHub:
-#cat /root/.ssh/id_rsa.pub
-#https://github.com/settings/keys
-# Connect to GitHub repo (replica)
-#git clone git@github.com:SergSha/replica.git
+ssh-keygen #Enter-Enter-Enter
+```
+Copy text of pub key and paste into GitHub:
+```
+cat /root/.ssh/id_rsa.pub
+```
+https://github.com/settings/keys
+```
+Connect to GitHub repo (replica)
+```
+git clone git@github.com:SergSha/replica.git
+```
 ------------------------------------------------
-```
+
 
 Make the file inst_set.sh execute
 ```
@@ -77,9 +83,11 @@ Add login for backup MySQL database
 mysql_config_editor set --login-path=backup -uroot -p
 ```
 
-# Download backup copy databases MySQL
+Download backup copy databases MySQL
 #mysql -uroot -p < /root/mydb_all.sql
+```
 /root/replica/mysqlrestore.sh
+```
 
 Start MySQL command console
 ```
