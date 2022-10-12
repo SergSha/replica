@@ -50,9 +50,7 @@ git clone https://github.com/SergSha/replica.git
 git clone https://github.com/SergSha/mysqlbackup
 ```
 
-____
 For to upload to GitHub
-
 Make pair keys
 ```
 ssh-keygen #Enter-Enter-Enter
@@ -68,8 +66,6 @@ Connect to GitHub repo (replica)
 ```
 git clone git@github.com:SergSha/replica.git
 ```
-____
-
 
 Make the file inst_set.sh execute
 ```
@@ -87,7 +83,7 @@ mysql_config_editor set --login-path=backup -uroot -p
 ```
 
 Download backup copy databases MySQL
-#mysql -uroot -p < /root/mydb_all.sql
+*#mysql -uroot -p < /root/mydb_all.sql*
 ```
 /root/replica/mysqlrestore.sh
 ```
@@ -116,7 +112,7 @@ Get replica status
 ```
 SHOW REPLICA STATUS\G
 ```
-____
+
 Go to source host to make new databeses for test replication
 
 After source host test replication
@@ -126,10 +122,8 @@ SHOW TABLES FROM cars_db;
 SELECT * FROM cars_db.new_cars;
 exit;
 ```
-____
-____
 
-RECOMENDATIONS
+RECOMENDATIONS:
 
 Add user for replication MASTER-MASTER
 ```
