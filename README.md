@@ -50,7 +50,9 @@ git clone https://github.com/SergSha/replica.git
 git clone https://github.com/SergSha/mysqlbackup
 ```
 
--------- For to upload to GitHub -------------
+____
+For to upload to GitHub
+
 Make pair keys
 ```
 ssh-keygen #Enter-Enter-Enter
@@ -66,7 +68,7 @@ Connect to GitHub repo (replica)
 ```
 git clone git@github.com:SergSha/replica.git
 ```
-------------------------------------------------
+____
 
 
 Make the file inst_set.sh execute
@@ -114,9 +116,9 @@ Get replica status
 ```
 SHOW REPLICA STATUS\G
 ```
-
+____
 Go to source host to make new databeses for test replication
-----------------------------------------------------
+
 After source host test replication
 ```
 SHOW DATABASES;
@@ -124,8 +126,11 @@ SHOW TABLES FROM cars_db;
 SELECT * FROM cars_db.new_cars;
 exit;
 ```
+____
+____
 
----------RECOMENDATIONS---------
+RECOMENDATIONS
+
 Add user for replication MASTER-MASTER
 ```
 CREATE USER repl@'10.0.1.11' IDENTIFIED WITH 'caching_sha2_password' BY 'Tn91Uk57@';
