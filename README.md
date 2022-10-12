@@ -59,6 +59,7 @@ Copy text of pub key and paste into GitHub:
 ```
 cat /root/.ssh/id_rsa.pub
 ```
+```
 https://github.com/settings/keys
 ```
 Connect to GitHub repo (replica)
